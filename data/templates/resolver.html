@@ -1,0 +1,41 @@
+<table width="100%" border="0" cellpadding="0" cellspacing="0" valign="top" style="border-collapse:separate; text-align:left;">
+    <tr class="">
+        <td class="palm-one-whole" rowspan="" valign="top" style="font-size:13px; width:px;">
+            <table width="100%" class="inner" border="0" cellpadding="0" cellspacing="0" valign="top" style="border-collapse:separate; font-size:13px;">
+                <tr>
+                    <td valign="top" style="padding: ">
+                        <table cellpadding="0" cellspacing="0" valign="top" style="border-collapse:collapse">
+                            <tr>
+                                <td colspan="2" valign="top" style="min-width:100%;  padding-bottom: 2px; font-size:16px; line-height:22px; font-weight:600; font-family: 'Avenir Next', 'Segoe UI', 'Calibri', Arial, sans-serif;      ">
+                                    <b>{{ origin }}</b> to <b>{{ destination }}</b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" valign="top" style="min-width:100%; padding-bottom: 5px; color:#333; font-size:13px; line-height:17px; font-family: 'Avenir Next', 'Segoe UI', 'Calibri', Arial, sans-serif;      ">
+                                    Flight {{ flight_code }} ({{ status }})
+                                </td>
+                            </tr>
+                            <tr style="min-width:100%;  padding-bottom: 4px;  font-size:13px; line-height:17px;  font-family:'Segoe UI', 'Helvetica Neue', Helvetica, 'Calibri', Arial, sans-serif;      ">
+                                <td valign="top" style="font-weight:bold">Departs</td>
+                                <td valign="top">{{ origin_airport }}, {{ departure_ts }}</td>
+                            </tr>
+                            <tr style="min-width:100%;  padding-bottom: 4px;  font-size:13px; line-height:17px;  font-family:'Segoe UI', 'Helvetica Neue', Helvetica, 'Calibri', Arial, sans-serif;      ">
+                                <td valign="top" style="font-weight:bold">Lands</td>
+                                <td valign="top">{{ destination_airport }}, {{ arrival_ts }}</td>
+                            </tr>
+                            <tr style="min-width:100%;  padding-bottom: 4px;  font-size:13px; line-height:17px;  font-family:'Segoe UI', 'Helvetica Neue', Helvetica, 'Calibri', Arial, sans-serif;      ">
+                                <td valign="top" style="font-weight:bold">Duration</td>
+                                <td valign="top">{{ duration }}</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" valign="top" style="min-width:100%; color:#aaa; font-size:11px; font-family: 'Avenir Next', 'Segoe UI', 'Calibri', Arial, sans-serif;      ">
+                                    According to scheduled data - Using local times
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
