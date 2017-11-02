@@ -1,26 +1,44 @@
-<table width="100%" border="0" cellpadding="0" cellspacing="0" valign="top" style="border-collapse:separate; text-align:left;">
+<table id="" class="card-v3" cellpadding="0" cellspacing="0" style="border:1px solid #NaNNaNNaN; border-radius:4px; width:100%; max-width:578px; mso-border-alt: none;">
+    <tr style="border:1px solid #NaNNaNNaN; mso-border-alt:none; display:block; border-radius: 3px;">
+        <td style="display:block; padding:8px; border-radius:2px; border:1px solid #ccc; font-size:0; vertical-align:top; background-color:white; mso-border-alt:none; position:relative;">
+            <table width="100%" border="0" cellpadding="0" cellspacing="0" valign="top" style="border-collapse:separate; text-align:left;">
     <tr class="">
+        <td class="palm-one-whole" rowspan="2" valign="top" style=" width:134px;">
+            <table width="100%" class="inner" border="0" cellpadding="0" cellspacing="0" valign="top" style="border-collapse:separate; ">
+                <tr>
+                    <td valign="top" style="padding: ">
+                        <a href="{{ flight_tracking_url }}" target="_blank" style="display:block;">
+                            <img src="https://images.vexels.com/media/users/3/128926/isolated/preview/c60c97eba10a56280114b19063d04655-plane-airport-round-icon-by-vexels.png" class="palm-one-whole" width="120" style="display:block; width:120px; vertical-align:top;" alt="Track this flight"/>
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </td>
         <td class="palm-one-whole" rowspan="" valign="top" style="font-size:13px; width:px;">
             <table width="100%" class="inner" border="0" cellpadding="0" cellspacing="0" valign="top" style="border-collapse:separate; font-size:13px;">
                 <tr>
                     <td valign="top" style="padding: ">
-                        <table cellpadding="0" cellspacing="0" valign="top" style="border-collapse:collapse">
+                        <table cellpadding="0" cellspacing="0" valign="top" style="min-width: 100%; border-collapse:collapse">
                             <tr>
                                 <td colspan="2" valign="top" style="min-width:100%;  padding-bottom: 2px; font-size:16px; line-height:22px; font-weight:600; font-family: 'Avenir Next', 'Segoe UI', 'Calibri', Arial, sans-serif;      ">
-                                    <b>{{ origin }}</b> to <b>{{ destination }}</b>
+                                    <a href="{{ flight_tracking_url }}" target="_blank" style="color:#000; text-decoration:none;">
+                                        {{ origin }} to {{ destination }}
+                                    </a>
                                 </td>
                             </tr>
                             <tr>
-                                <td colspan="2" valign="top" style="min-width:100%; padding-bottom: 5px; color:#333; font-size:13px; line-height:17px; font-family: 'Avenir Next', 'Segoe UI', 'Calibri', Arial, sans-serif;      ">
-                                    Flight {{ flight_code }} ({{ status }})
+                                <td colspan="2" valign="top" style="min-width:100%; padding-bottom: 7px; font-size:13px; line-height:17px; font-family: 'Avenir Next', 'Segoe UI', 'Calibri', Arial, sans-serif;      ">
+                                    <a href="{{ flight_tracking_url }}" target="_blank" style="color:#333; text-decoration:none;">
+                                        Flight {{ flight_code }} - {{ status }}
+                                    </a>
                                 </td>
                             </tr>
                             <tr style="min-width:100%;  padding-bottom: 4px;  font-size:13px; line-height:17px;  font-family:'Segoe UI', 'Helvetica Neue', Helvetica, 'Calibri', Arial, sans-serif;      ">
-                                <td valign="top" style="font-weight:bold">Departs</td>
+                                <td valign="top" style="font-weight:bold">Departure</td>
                                 <td valign="top">{{ origin_airport }}, {{ departure_ts }}</td>
                             </tr>
                             <tr style="min-width:100%;  padding-bottom: 4px;  font-size:13px; line-height:17px;  font-family:'Segoe UI', 'Helvetica Neue', Helvetica, 'Calibri', Arial, sans-serif;      ">
-                                <td valign="top" style="font-weight:bold">Lands</td>
+                                <td valign="top" style="font-weight:bold">Arrival</td>
                                 <td valign="top">{{ destination_airport }}, {{ arrival_ts }}</td>
                             </tr>
                             <tr style="min-width:100%;  padding-bottom: 4px;  font-size:13px; line-height:17px;  font-family:'Segoe UI', 'Helvetica Neue', Helvetica, 'Calibri', Arial, sans-serif;      ">
@@ -36,6 +54,9 @@
                     </td>
                 </tr>
             </table>
+        </td>
+    </tr>
+</table>
         </td>
     </tr>
 </table>

@@ -91,18 +91,25 @@ class FlightCommandViewset(GenericViewSet):
         if not flight_data:
             return
 
+        origin = flight_data['origin']['city']
+        destination = flight_data['destination']['city']
+        flight_code = flight_data['ident']
         context = {
-            'flight_code': flight_data['ident'],
+            'flight_tracking_url': cls._get_flight_tracking_url(flight_code),
+            'flight_code': flight_code,
             'status': flight_data['status'],
-            'origin': flight_data['origin']['city'],
-            'destination': flight_data['destination']['city'],
+            'origin': origin,
+            'destination': destination,
             'departure_ts': cls._get_friendly_ts(flight_data['filed_departure_time']['localtime']),
             'arrival_ts': cls._get_friendly_ts(flight_data['filed_arrival_time']['localtime']),
             'origin_airport': flight_data['origin']['airport_name'],
             'destination_airport': flight_data['destination']['airport_name'],
             'duration': cls._seconds_to_ts(flight_data['filed_ete']),
         }
-        return {'body': render_to_string('resolver.html', context)}
+        return {
+            'subject': 'My {} to {} flight'.format(origin, destination),
+            'body': render_to_string('resolver.html', context),
+        }
 
     @staticmethod
     def _get_friendly_ts(timestamp_int):
@@ -111,6 +118,13 @@ class FlightCommandViewset(GenericViewSet):
         e.g. Nov 13 07:33 PM
         """
         return datetime.fromtimestamp(timestamp_int).strftime('%b %d %I:%M %p')
+
+    @staticmethod
+    def _get_flight_tracking_url(flight_code):
+        """
+        Returns a Google URL to track the given flight.
+        """
+        return 'https://www.google.com/search?q=track+flight+{}'.format(flight_code)
 
     @staticmethod
     def _seconds_to_ts(seconds):
