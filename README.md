@@ -34,6 +34,8 @@ basic data of an upcoming flight, given by its flight code (e.g. `AA123`), using
 7. Refresh Gmail with Mixmax installed. Click `Compose` and type `/testflight` to use this new command
 
 ## Implementation notes
+- App has been built using Python 2.7, Django 1.11 with Django REST Framework 3.7
+
 - FlightAware API free tier is limited, both in terms of data (I can't show more useful data like airline name or airport terminal/gate) and throughput (like 500 queries/month, 5 per minute)
 - I've added some simple DB cache to not query FlightAware API again after one suggestion gets picked
 - Frontend code for the resolved widget can be improved; I just borrowed most styles from the Wiki Slash command
