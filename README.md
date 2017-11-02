@@ -11,8 +11,10 @@ basic data of an upcoming flight, given by its flight code (e.g. `AA123`), using
     - Name: `Get basic data and track a given flight`
     - Command: `flight`
     - Parameter placeholder: `[Flight code (e.g. AA123)]`
-    - Command Parameter Suggestions API URL: `https://mixmax-jcpmmx.herokuapp.com/v1/commands/flight/suggestions/`
-    - Command Parameter Resolver API URL: `https://mixmax-jcpmmx.herokuapp.com/v1/commands/flight/resolver/`
+    - Command Parameter Suggestions API URL:  
+`https://mixmax-jcpmmx.herokuapp.com/v1/commands/flight/suggestions/`
+    - Command Parameter Resolver API URL:  
+`https://mixmax-jcpmmx.herokuapp.com/v1/commands/flight/resolver/`
 3. Refresh Gmail with Mixmax installed. Click `Compose` and type `/flight` to use this new command
 
 ### Locally
@@ -25,14 +27,17 @@ basic data of an upcoming flight, given by its flight code (e.g. `AA123`), using
     - Name: `Get basic data and track a given flight`
     - Command: `testflight`
     - Parameter placeholder: `[Flight code (e.g. AA123)]`
-    - Command Parameter Suggestions API URL: `https://localhost:8000/v1/commands/flight/suggestions/`
-    - Command Parameter Resolver API URL: `https://localhost:8000/v1/commands/flight/resolver/`
+    - Command Parameter Suggestions API URL:  
+`https://localhost:8000/v1/commands/flight/suggestions/`
+    - Command Parameter Resolver API URL:  
+`https://localhost:8000/v1/commands/flight/resolver/`
 7. Refresh Gmail with Mixmax installed. Click `Compose` and type `/testflight` to use this new command
 
 ## Implementation notes
 - FlightAware API free tier is limited, both in terms of data (I can't show more useful data like airline name or airport terminal/gate) and throughput (like 500 queries/month, 5 per minute)
 - I've added some simple DB cache to not query FlightAware API again after one suggestion gets picked
 - Frontend code for the resolved widget can be improved; I just borrowed most styles from the Wiki Slash command
+- This Django project includes some settings that are **definitely not recommended** for production environments, like having `DEBUG=True`, API keys in files (we could use `git-crypt`, for instance) and using DB for cache (we could use Redis instead). I chose them deliberately for the sake of simplicity.
 
 ---
 
