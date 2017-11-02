@@ -35,7 +35,9 @@ basic data of an upcoming flight, given by its flight code (e.g. `AA123`), using
 
 ### TODOs (or nice-to-have)
 - [ ] Add test cases
+- [ ] Add more docstrings
 - [ ] Use serilizers to manage data input/output
+- [ ] Once we have serializers, add API docs
 - [ ] Build a Node.js version of this command
 
 ---
