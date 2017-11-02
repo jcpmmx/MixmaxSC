@@ -33,6 +33,13 @@ basic data of an upcoming flight, given by its flight code (e.g. `AA123`), using
 `https://localhost:8000/v1/commands/flight/resolver/`
 7. Refresh Gmail with Mixmax installed. Click `Compose` and type `/testflight` to use this new command
 
+### TODOs (or nice-to-have)
+- [ ] Add test cases
+- [ ] Use serilizers to manage data input/output
+- [ ] Build a Node.js version of this command
+
+---
+
 ## Implementation notes
 - App has been built using Python 2.7, Django 1.11 with Django REST Framework 3.7
 
