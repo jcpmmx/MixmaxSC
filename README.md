@@ -41,7 +41,7 @@ basic data of an upcoming flight, given by its flight code (e.g. `AA123`), using
 - Frontend code for the resolved widget can be improved; I just borrowed most styles from the Wiki Slash command
 - This Django project includes some settings that are **definitely not recommended** for production environments, like having `DEBUG=True`, API keys in files (we could use `git-crypt`, for instance) and using DB for cache (we could use Redis instead). I chose them deliberately for the sake of simplicity.
 
-### Nices to have
+### Nice to haves
 - Add test cases
 - Add more docstrings
 - Use serilizers to manage data input/output
