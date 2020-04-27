@@ -23,7 +23,7 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "3$mj^1z1%fby$1n_$9-=ZZ^@yk6(6ik=a+bt2hvuljzpcy2!+f"
+SECRET_KEY = "<EDITED>"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -156,7 +156,7 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # !!! Obviously insecure but good enough for quick testing purposes
 FLIGHTAWARE_USERNAME = 'jcpmmx'
-FLIGHTAWARE_API_KEY = 'a4323074bd789de9f08ce975ec3cd40aa002264c'
+FLIGHTAWARE_API_KEY = '<EDITED>'
 
 REST_FRAMEWORK = {
     'DEFAULT_RENDERER_CLASSES': (
